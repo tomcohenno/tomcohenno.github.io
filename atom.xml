@@ -4,7 +4,7 @@
   <title><![CDATA[Tom's Octopress Blog]]></title>
   <link href="http://tomcohenno.github.io/atom.xml" rel="self"/>
   <link href="http://tomcohenno.github.io/"/>
-  <updated>2014-10-08T09:35:06-04:00</updated>
+  <updated>2014-10-08T09:36:34-04:00</updated>
   <id>http://tomcohenno.github.io/</id>
   <author>
     <name><![CDATA[Tom]]></name>
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Tom's First Post on Octopress - an Attempt to Understand Evaluation Strategy (Aka a Mashup of Wikipedia, Stackoverflow, Actual TA Knowledge, and My Own Musings)]]></title>
+    <title type="html"><![CDATA[Tom's First Post on Octopress - an Attempt to Understand Evaluation Strategy]]></title>
     <link href="http://tomcohenno.github.io/blog/2014/10/07/toms-first-post-on-octopress/"/>
     <updated>2014-10-07T19:25:35-04:00</updated>
     <id>http://tomcohenno.github.io/blog/2014/10/07/toms-first-post-on-octopress</id>
     <content type="html"><![CDATA[<p>So, I&rsquo;m not sure about you all, but it seems that everytime I modified an argument in a method I would make the wrong assumption as to what would happen to it outside of the method.  It took some googling, but I was able to figure how out Ruby passes arguments to methods - Ruby doesn&rsquo;t strictly use call-by-value or call-by-reference, but rather passes arguments by using call-by-sharing.</p>
 
-<p>Basically, Ruby neither completely replicates an argument in memory (call-by-value), nor does it send only a reference that could mutate the original argument in a given method.  Ruby merely creates another variable &ldquo;label&rdquo; that points to the exact same location in memory as the runtime argument.  Here comes my major revelation - the method can now act as a call-by-value OR a call-by-value, depending on what functions are called within the method.</p>
+<p>Basically, Ruby neither completely replicates an argument in memory (call-by-value), nor does it send only a reference that could mutate the original argument in a given method.  Ruby merely creates another variable &ldquo;label&rdquo; that points to the exact same location in memory as the runtime argument.  Here comes my major revelation - the method can now &ldquo;act&rdquo; as a call-by-value OR a call-by-value, depending on what functions are called within the method.</p>
 
 <p>There are two types of functions - those that modify a memory location and those that modify the label that points to a memory location.  For example, the &lt;&lt; operator actually modifies the memory location that both the run-time variable and the in-method argument point to.  The = operator merely assigns a given variable to ANOTHER memory location.  Thus, the shovel acts as pass-by-reference since the run-time variable is modified, and the equal sign acts as pass-by-value since the original value is unchanged.</p>
 ]]></content>
