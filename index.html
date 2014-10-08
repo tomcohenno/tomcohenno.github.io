@@ -9,8 +9,7 @@
   <meta name="author" content="Tom">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="So, I&rsquo;m not sure about you all, but it seems that everytime I modified an argument in a method I would make the wrong assumption as to what &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,7 +71,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/07/toms-first-post-on-octopress/">Tom&#8217;s First Post on Octopress</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/10/07/toms-first-post-on-octopress/">Tom&#8217;s First Post on Octopress - an Attempt to Understand Evaluation Strategy (Aka a Mashup of Wikipedia, Stackoverflow, Actual TA Knowledge, and My Own Musings)</a></h1>
     
     
       <p class="meta">
@@ -88,7 +87,11 @@
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>So, I&rsquo;m not sure about you all, but it seems that everytime I modified an argument in a method I would make the wrong assumption as to what would happen to it outside of the method.  It took some googling, but I was able to figure how out Ruby passes arguments to methods - Ruby doesn&rsquo;t strictly use call-by-value or call-by-reference, but rather passes arguments by using call-by-sharing.</p>
+
+<p>Basically, Ruby neither completely replicates an argument in memory (call-by-value), nor does it send only a reference that could mutate the original argument in a given method.  Ruby merely creates another variable &ldquo;label&rdquo; that points to the exact same location in memory as the runtime argument.  Here comes my major revelation - the method can now act as a call-by-value OR a call-by-value, depending on what functions are called within the method.</p>
+
+<p>There are two types of functions - those that modify a memory location and those that modify the label that points to a memory location.  For example, the &lt;&lt; operator actually modifies the memory location that both the run-time variable and the in-method argument point to.  The = operator merely assigns a given variable to ANOTHER memory location.  Thus, the shovel acts as pass-by-reference since the run-time variable is modified, and the equal sign acts as pass-by-value since the original value is unchanged.</p>
 </div>
   
   
@@ -109,7 +112,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/10/07/toms-first-post-on-octopress/">Tom&#8217;s First Post on Octopress</a>
+        <a href="/blog/2014/10/07/toms-first-post-on-octopress/">Tom&#8217;s First Post on Octopress - an Attempt to Understand Evaluation Strategy (Aka a Mashup of Wikipedia, Stackoverflow, Actual TA Knowledge, and My Own Musings)</a>
       </li>
     
   </ul>
