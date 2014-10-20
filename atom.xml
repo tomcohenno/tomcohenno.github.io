@@ -4,7 +4,7 @@
   <title><![CDATA[Tom's Octopress Blog]]></title>
   <link href="http://tomcohenno.github.io/atom.xml" rel="self"/>
   <link href="http://tomcohenno.github.io/"/>
-  <updated>2014-10-08T09:37:22-04:00</updated>
+  <updated>2014-10-20T19:39:56-04:00</updated>
   <id>http://tomcohenno.github.io/</id>
   <author>
     <name><![CDATA[Tom]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[RRRRRRRspec]]></title>
+    <link href="http://tomcohenno.github.io/blog/2014/10/20/rrrrrrrspec/"/>
+    <updated>2014-10-20T18:04:34-04:00</updated>
+    <id>http://tomcohenno.github.io/blog/2014/10/20/rrrrrrrspec</id>
+    <content type="html"><![CDATA[<h1>An introduction to RubyTest</h1>
+
+<p>Given the massive number of times that we need to run Rspec, I found it helpful to install a package for Sublime that would let me run tests without having to leave the program.  This program, RubyTest, is an add-in to Sublime and is installable directly through the program.</p>
+
+<h3>Step 1 - Install Package Control</h3>
+
+<p>If you haven&rsquo;t already, you need to install Package Manager for Sublime.  It&rsquo;s really easy.  Just open a Sublime document and hit command + shift + P.  Type in &ldquo;Install Package&rdquo; (or at least enough of the letters&hellip;) and hit enter.</p>
+
+<p><img src="http://tomcohenno.github.io/Users/TomCohenno/Documents/repos/octopress/source/images/install.png" alt="hello" /></p>
+
+<p>After Package Control is installed we are ready to install the actual package that will be running our Rspec tests - RubyTest.</p>
+
+<h3>Step 2 - Download RubyTest</h3>
+
+<p>This is done in the same way that we installed Package Control.  From within Sublime, hit command + shift + P again to bring up our dialog box.  Type &ldquo;RubyTest&rdquo; and hit enter to install.</p>
+
+<p><img src="http://tomcohenno.github.io/Users/TomCohenno/Documents/repos/octopress/source/images/rubytest.png" alt="rubytest" /></p>
+
+<h3>Step 3 - Tell RubyTest about RVM</h3>
+
+<p>When RVM is installed it slightly modifies your Ruby directory structure, and RubyTest needs to be made aware of this in order to work.  Thankfully the fix is relatively straightforward.  Since Sublime uses various text files to manage package settings, we need to modify the User settings for RubyTest.</p>
+
+<p>First, open Sublime and go to Sublime Text -> Preference -> Package Settings -> RubyTest -> Settings - User</p>
+
+<p><img src="http://tomcohenno.github.io/Users/TomCohenno/Documents/repos/octopress/source/images/find_settings.png" alt="find settings" /></p>
+
+<p>In the empty text file that appears, copy/paste the following code in order to inform Sublime about RVM.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>  "check_for_rvm": true
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now save, close the file, and quit Sublime.</p>
+
+<h3>Step 4 - Using RubyTest</h3>
+
+<p>Using RubyTest is relatively straightforward, however, you must open documents from the terminal.  This is nothing diferent than how most of us open documents already.  Just type <code>subl .</code> in your directory to get started.</p>
+
+<p>There are two main options when you run Rspec:</p>
+
+<p>1 - Run all tests at once - Right click anywhere in your rspec document and go to RubyTest -> Run all tests.</p>
+
+<p>This will run all rspec tests and output the results in the test panel.</p>
+
+<p><img src="http://tomcohenno.github.io/Users/TomCohenno/Documents/repos/octopress/source/images/rspec%20all.png" alt="all_tests" /></p>
+
+<p>2 - Run only a specific test - In the rspec file, right click on the specific test that you want to run and click &ldquo;Run single test&rdquo;.  This will run the test(s) that fall under the context of the rspec.</p>
+
+<p>For example, in the screen below, only the spec &lsquo;has a title&rsquo; will run. However, if the cursor had been on line 14 instead of 17, running &ldquo;run single test&rdquo; will actually run all tests that fall under the parent context of &lsquo;Movie.new&rsquo;.</p>
+
+<p><img src="http://tomcohenno.github.io/Users/TomCohenno/Documents/repos/octopress/source/images/rspec_example.png" alt="rspecfail" /></p>
+
+<h3>Step 5 - Find out how to run tests vertically and let me know how to do so :)</h3>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tom's First Post on Octopress - an Attempt to Understand Evaluation Strategy]]></title>

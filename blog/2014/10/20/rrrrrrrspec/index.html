@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tom&#8217;s Octopress Blog</title>
+  <title>RRRRRRRspec - Tom&#8217;s Octopress Blog</title>
   <meta name="author" content="Tom">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tomcohenno.github.io">
+  <link rel="canonical" href="http://tomcohenno.github.io/blog/2014/10/20/rrrrrrrspec">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Tom's Octopress Blog" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/20/rrrrrrrspec/">RRRRRRRspec</a></h1>
+      <h1 class="entry-title">RRRRRRRspec</h1>
     
     
       <p class="meta">
@@ -87,7 +84,7 @@
   </header>
 
 
-  <div class="entry-content"><h1>An introduction to RubyTest</h1>
+<div class="entry-content"><h1>An introduction to RubyTest</h1>
 
 <p>Given the massive number of times that we need to run Rspec, I found it helpful to install a package for Sublime that would let me run tests without having to leave the program.  This program, RubyTest, is an add-in to Sublime and is installable directly through the program.</p>
 
@@ -145,51 +142,46 @@
 
 <h3>Step 5 - Find out how to run tests vertically and let me know how to do so :)</h3>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Tom</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-10-20T18:04:34-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:04 pm</span></time>
+      
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/07/toms-first-post-on-octopress/">Tom&#8217;s First Post on Octopress - an Attempt to Understand Evaluation Strategy</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-10-07T19:25:35-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:25 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>So, I&rsquo;m not sure about you all, but it seems that everytime I modified an argument in a method I would make the wrong assumption as to what would happen to it outside of the method.  It took some googling, but I was able to figure how out Ruby passes arguments to methods - Ruby doesn&rsquo;t strictly use call-by-value or call-by-reference, but rather passes arguments by using call-by-sharing.</p>
-
-<p>Basically, Ruby neither completely replicates an argument in memory (call-by-value), nor does it send only a reference that could mutate the original argument in a given method.  Ruby merely creates another variable &ldquo;label&rdquo; that points to the exact same location in memory as the runtime argument.  Here comes my major revelation - the method can now &ldquo;act&rdquo; as a call-by-value OR a call-by-value, depending on what functions are called within the method.</p>
-
-<p>There are two types of functions - those that modify a memory location and those that modify the label that points to a memory location.  For example, the &lt;&lt; operator actually modifies the memory location that both the run-time variable and the in-method argument point to.  The = operator merely assigns a given variable to ANOTHER memory location.  Thus, the shovel acts as pass-by-reference since the run-time variable is modified, and the equal sign acts as pass-by-value since the original value is unchanged.</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tomcohenno.github.io/blog/2014/10/20/rrrrrrrspec/" data-via="" data-counturl="http://tomcohenno.github.io/blog/2014/10/20/rrrrrrrspec/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/10/07/toms-first-post-on-octopress/" title="Previous Post: Tom's First Post On Octopress - An attempt to understand Evaluation Strategy">&laquo; Tom&#8217;s First Post On Octopress - An attempt to understand Evaluation Strategy</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -213,6 +205,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
